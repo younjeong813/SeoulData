@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 2em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+        p, li {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <p><strong>이메일:</strong> {{ email }}</p>
+    <p><strong>주소:</strong> {{ address }}</p>
+    <p><strong>전화번호:</strong> {{ phone }}</p>
+
+    <h2>학력</h2>
+    <ul>
+    {% for edu in education %}
+        <li>{{ edu }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>경력</h2>
+    <ul>
+    {% for exp in experience %}
+        <li>{{ exp }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>기술</h2>
+    <ul>
+    {% for skill in skills %}
+        <li>{{ skill }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,14 @@
+streamlit
+jinja2
+weasyprint
+openai
+azure-cognitiveservices-speech
+pdfkit
+reportlab
+<<<<<<< HEAD
+pillow
+=======
+gtts
+SpeechRecognition
+pyaudio 
+>>>>>>> main

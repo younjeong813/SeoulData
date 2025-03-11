@@ -7,7 +7,7 @@ from streamlit_folium import st_folium
 
 
 # 데이터 파일 경로
-file_path = "./data/cleaned_jobs_with_location.csv"
+file_path = "./app/data/cleaned_jobs_with_location.csv"
 
 # 데이터 불러오기
 df = pd.read_csv(file_path)

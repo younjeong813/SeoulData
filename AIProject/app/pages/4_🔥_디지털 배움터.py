@@ -10,7 +10,6 @@ from PIL import Image
 key = "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"
 
 
-
 # [함수] --------------------------------------------------------------------------------------
 # 특정 경로의 이미지 파일에서 크기 가져오기
 def get_image_size(image_path):
@@ -77,11 +76,11 @@ def crop_images_in_folder(folder_path, target_size):
 
 # [전처리] : 이미지 사이즈 크롭해서 맞추기 (완료해서 주석 처리 해둠.)----------------------------------------------------------------------------
 # 이미지 크기 가져오기
-image_path = "./static/icon/page3/calendar.jpg"
+image_path = "./app/static/icon/page3/calendar.jpg"
 target_size = get_image_size(image_path)
 
 # 크롭할 폴더 지정
-folder_path = "./static/icon/page3"  # 크롭할 이미지들이 있는 폴더 경로
+folder_path = "./app/static/icon/page3"  # 크롭할 이미지들이 있는 폴더 경로
 
 # 폴더 내 모든 이미지 크롭
 crop_images_in_folder(folder_path, target_size)

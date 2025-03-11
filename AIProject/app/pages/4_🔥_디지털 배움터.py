@@ -76,11 +76,11 @@ def crop_images_in_folder(folder_path, target_size):
 
 # [전처리] : 이미지 사이즈 크롭해서 맞추기 (완료해서 주석 처리 해둠.)----------------------------------------------------------------------------
 # 이미지 크기 가져오기
-image_path = "./app/static/icon/page3/calendar.jpg"
+image_path = "./static/icon/page3/calendar.jpg"
 target_size = get_image_size(image_path)
 
 # 크롭할 폴더 지정
-folder_path = "./app/static/icon/page3"  # 크롭할 이미지들이 있는 폴더 경로
+folder_path = "./static/icon/page3"  # 크롭할 이미지들이 있는 폴더 경로
 
 # 폴더 내 모든 이미지 크롭
 crop_images_in_folder(folder_path, target_size)
@@ -176,3 +176,4 @@ else:
     st.write("강좌를 클릭하여 자세한 영상을 확인하세요.")
 
 # use 'streamlit run Demo.py' to run the code
+

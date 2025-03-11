@@ -79,6 +79,8 @@ key = "sk-proj-7cXrdwHiAn0vtTTvZU3r8ElsguwfLdRcQ1WIYerXjG_w9wDvczVmm126Q_T3BlbkF
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  
 STATIC_DIR = os.path.join(BASE_DIR,"..") 
 image_path = os.path.join(STATIC_DIR,"static","icon","page3")
+
+
 # image_path = os.path.join(STATIC_DIR, "calendar.jpg")
 # target_size = get_image_size(image_path)
 
@@ -97,41 +99,35 @@ st.write("디지털 리터러시 향상에 도움이 되는 **영상 강좌**를
 
 
 
-# 강좌 목록
 topics = [
     {"title": "이메일 보내기", "description": "이메일을 효과적으로 보내는 법을 배웁니다.", 
      "image": os.path.join(image_path, "email.jpg"), 
-     "details": "이메일 발송/수신과 관련된 기초적인 기능을 다룹니다.",
-     "video": "C:/Users/User/Desktop/SKKU/2024 Winter Break/Microsoft Hackerton/ExampleVid-SendEmail.mp4"},
+     "details": "이메일 발송/수신과 관련된 기초적인 기능을 다룹니다."},
 
     {"title": "인터넷 뱅킹", "description": "안전하게 인터넷 뱅킹을 사용하는 법을 배웁니다.", 
      "image": os.path.join(image_path, "bank.jpg"),
-     "details": "인터넷 뱅킹 로그인 및 송금 방법을 다룹니다.",
-     "video": "C:/Users/User/Desktop/SKKU/2024 Winter Break/Microsoft Hackerton/ExampleVid-SendEmail.mp4"},
+     "details": "인터넷 뱅킹 로그인 및 송금 방법을 다룹니다."},
 
     {"title": "화상 회의", "description": "화상 회의 진행 및 팁을 배웁니다.", 
      "image": os.path.join(image_path, "zoom.jpg"),
-     "details": "화상 회의 어플리케이션인 줌(Zoom)의 기초적인 사용 방법을 다룹니다.",
-     "video": "C:/Users/User/Desktop/SKKU/2024 Winter Break/Microsoft Hackerton/ExampleVid-SendEmail.mp4"},
+     "details": "화상 회의 어플리케이션인 줌(Zoom)의 기초적인 사용 방법을 다룹니다."},
 
     {"title": "업무 일정 관리", 
      "description": "디지털 캘린더를 활용하여 업무 일정을 효율적으로 관리하는 방법을 배웁니다.", 
      "image": os.path.join(image_path, "calendar.jpg"), 
-     "details": "구글 캘린더를 활용하여 일정을 추가하고 관리하는 방법을 다룹니다.", 
-     "video": "C:/Users/User/Desktop/SKKU/2024 Winter Break/Microsoft Hackerton/ExampleVid-SendEmail.mp4"},
+     "details": "구글 캘린더를 활용하여 일정을 추가하고 관리하는 방법을 다룹니다."},
 
     {"title": "보이스피싱 예방", 
      "description": "보이스피싱을 예방하고, 의심되는 전화를 구별하는 방법을 배웁니다.", 
      "image": os.path.join(image_path, "phishing.jpg"), 
-     "details": "보이스피싱의 유형과 피해를 예방할 수 있는 방법, 의심스러운 전화를 받았을 때의 대처 방법을 다룹니다.", 
-     "video": "C:/Users/User/Desktop/SKKU/2024 Winter Break/Microsoft Hackerton/ExampleVid-SendEmail.mp4"},
+     "details": "보이스피싱의 유형과 피해를 예방할 수 있는 방법, 의심스러운 전화를 받았을 때의 대처 방법을 다룹니다."},
 
     {"title": "온라인 쇼핑", 
      "description": "온라인 쇼핑을 안전하게 하는 방법을 배웁니다.", 
      "image": os.path.join(image_path, "internetshop.jpg"), 
-     "details": "쿠팡 모바일 어플을 이용한 온라인 쇼핑의 시작부터 배송까지 기초적인 방법을 다룹니다.", 
-     "video": "C:/Users/User/Desktop/SKKU/2024 Winter Break/Microsoft Hackerton/ExampleVid-SendEmail.mp4"}
+     "details": "쿠팡 모바일 어플을 이용한 온라인 쇼핑의 시작부터 배송까지 기초적인 방법을 다룹니다."}
 ]
+
 
 # 검색 바
 query = st.text_input(

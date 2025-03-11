@@ -4,10 +4,15 @@ import streamlit.components.v1 as components
 from datetime import datetime
 # import folium
 from streamlit_folium import st_folium
+import os
 
 
-# 데이터 파일 경로
-file_path = "./app/data/cleaned_jobs_with_location.csv"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  
+STATIC_DIR = os.path.join(BASE_DIR,"..") 
+
+# 이미지 경로 설정 (절대 경로)
+file_path = os.path.join(STATIC_DIR, "data", "cleaned_jobs_with_location.csv")
+
 
 # 데이터 불러오기
 df = pd.read_csv(file_path)
@@ -97,6 +102,8 @@ if "page" not in st.session_state:
 def switch_page(page_name):
     st.session_state["page"] = page_name
 
+# 이미지 경로 설정 (절대 경로)
+ttt = os.path.join(STATIC_DIR, "preprocessing", "seoul_jobs_density_by_district.html")
 
 # 메인 페이지
 if st.session_state["page"] == "main":
@@ -104,7 +111,7 @@ if st.session_state["page"] == "main":
     
     # 작은 제목 (일자리 현황)
     st.markdown("<h3 style='font-size:20px; margin-top:10px;'>일자리 현황</h3>", unsafe_allow_html=True)
-    components.html(open("./preprocessing/seoul_jobs_density_by_district.html", "r").read(), height=600)
+    components.html(open(ttt, "r").read(), height=600)
 
     # 현재 페이지 데이터 가져오기
     start_idx = st.session_state["page_number"] * PAGE_SIZE

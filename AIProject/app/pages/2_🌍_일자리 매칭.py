@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
 from datetime import datetime
-import folium
+# import folium
 from streamlit_folium import st_folium
 
 

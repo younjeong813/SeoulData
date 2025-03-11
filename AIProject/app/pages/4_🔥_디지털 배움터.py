@@ -77,8 +77,7 @@ key = "sk-proj-7cXrdwHiAn0vtTTvZU3r8ElsguwfLdRcQ1WIYerXjG_w9wDvczVmm126Q_T3BlbkF
 # # [전처리] : 이미지 사이즈 크롭해서 맞추기 (완료해서 주석 처리 해둠.)----------------------------------------------------------------------------
 # # 이미지 크기 가져오기
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  
-STATIC_DIR = os.path.join(BASE_DIR,"..") 
-image_path = os.path.join(STATIC_DIR,"static","icon","page3")
+image_path = os.path.join(BASE_DIR,"..","static","icon","page3")
 
 
 # image_path = os.path.join(STATIC_DIR, "calendar.jpg")

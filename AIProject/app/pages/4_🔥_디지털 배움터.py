@@ -123,7 +123,7 @@ topics = [
 
     {"title": "온라인 쇼핑", 
      "description": "온라인 쇼핑을 안전하게 하는 방법을 배웁니다.", 
-     "image": os.path.join(image_path, "internetshop.jpg"), 
+     "image": os.path.join(image_path, "internetshop.jpeg"), 
      "details": "쿠팡 모바일 어플을 이용한 온라인 쇼핑의 시작부터 배송까지 기초적인 방법을 다룹니다."}
 ]
 

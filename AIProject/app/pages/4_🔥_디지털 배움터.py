@@ -10,83 +10,83 @@ from PIL import Image
 key = "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"
 
 
-# [함수] --------------------------------------------------------------------------------------
-# 특정 경로의 이미지 파일에서 크기 가져오기
-def get_image_size(image_path):
-    with Image.open(image_path) as img:
-        return img.size  # (width, height)
+# # [함수] --------------------------------------------------------------------------------------
+# # 특정 경로의 이미지 파일에서 크기 가져오기
+# def get_image_size(image_path):
+#     with Image.open(image_path) as img:
+#         return img.size  # (width, height)
 
-# PNG를 JPG로 변환하는 함수
-def convert_png_to_jpg(image_path, save_path):
-    with Image.open(image_path) as img:
-        # PNG 이미지가 RGBA 모드라면, 투명 배경을 흰색으로 채움
-        if img.mode == "RGBA":
-            # 새로운 흰색 배경 이미지를 생성 (크기는 원본 이미지 크기와 동일)
-            background = Image.new("RGB", img.size, (255, 255, 255))  # 흰색 배경 (RGB)
+# # PNG를 JPG로 변환하는 함수
+# def convert_png_to_jpg(image_path, save_path):
+#     with Image.open(image_path) as img:
+#         # PNG 이미지가 RGBA 모드라면, 투명 배경을 흰색으로 채움
+#         if img.mode == "RGBA":
+#             # 새로운 흰색 배경 이미지를 생성 (크기는 원본 이미지 크기와 동일)
+#             background = Image.new("RGB", img.size, (255, 255, 255))  # 흰색 배경 (RGB)
             
-            # 흰색 배경에 원본 이미지를 붙여넣음
-            background.paste(img, (0, 0), img)  # img의 알파 채널을 마스크로 사용
+#             # 흰색 배경에 원본 이미지를 붙여넣음
+#             background.paste(img, (0, 0), img)  # img의 알파 채널을 마스크로 사용
             
-            img = background  # 배경이 흰색인 이미지를 사용
+#             img = background  # 배경이 흰색인 이미지를 사용
         
-        # JPG로 저장
-        img.save(save_path, "JPEG")
+#         # JPG로 저장
+#         img.save(save_path, "JPEG")
 
 
-# 이미지 크롭 함수
-def crop_image(image_path, size, save_path):
-    with Image.open(image_path) as img:
-        # 크롭할 크기 계산 (중앙을 기준으로)
-        width, height = img.size
-        target_width, target_height = size
+# # 이미지 크롭 함수
+# def crop_image(image_path, size, save_path):
+#     with Image.open(image_path) as img:
+#         # 크롭할 크기 계산 (중앙을 기준으로)
+#         width, height = img.size
+#         target_width, target_height = size
         
-        # 중앙을 기준으로 크롭
-        left = (width - target_width) / 2
-        top = (height - target_height) / 2
-        right = (width + target_width) / 2
-        bottom = (height + target_height) / 2
+#         # 중앙을 기준으로 크롭
+#         left = (width - target_width) / 2
+#         top = (height - target_height) / 2
+#         right = (width + target_width) / 2
+#         bottom = (height + target_height) / 2
 
-        # 크롭된 이미지 생성
-        img_cropped = img.crop((left, top, right, bottom))
+#         # 크롭된 이미지 생성
+#         img_cropped = img.crop((left, top, right, bottom))
 
-        # 크롭된 이미지 저장
-        img_cropped.save(save_path)
+#         # 크롭된 이미지 저장
+#         img_cropped.save(save_path)
 
-# 특정 폴더 내 모든 이미지 파일에 대해 크롭 수행
-def crop_images_in_folder(folder_path, target_size):
-    # 폴더 내 모든 파일을 순차적으로 확인
-    for file_name in os.listdir(folder_path):
-        file_path = os.path.join(folder_path, file_name)
+# # 특정 폴더 내 모든 이미지 파일에 대해 크롭 수행
+# def crop_images_in_folder(folder_path, target_size):
+#     # 폴더 내 모든 파일을 순차적으로 확인
+#     for file_name in os.listdir(folder_path):
+#         file_path = os.path.join(folder_path, file_name)
         
-        # PNG 파일을 JPG로 변환 후 크롭
-        if file_name.endswith('.png'):
-            # PNG를 JPG로 변환
-            jpg_file_path = file_path.replace(".png", ".jpg")
-            convert_png_to_jpg(file_path, jpg_file_path)
-            print(f"PNG 파일을 JPG로 변환 완료: {file_name} -> {jpg_file_path}")
-            # JPG로 변환된 파일 크롭
-            crop_image(jpg_file_path, target_size, jpg_file_path)
-            print(f"크롭된 이미지 저장: {jpg_file_path}")
+#         # PNG 파일을 JPG로 변환 후 크롭
+#         if file_name.endswith('.png'):
+#             # PNG를 JPG로 변환
+#             jpg_file_path = file_path.replace(".png", ".jpg")
+#             convert_png_to_jpg(file_path, jpg_file_path)
+#             print(f"PNG 파일을 JPG로 변환 완료: {file_name} -> {jpg_file_path}")
+#             # JPG로 변환된 파일 크롭
+#             crop_image(jpg_file_path, target_size, jpg_file_path)
+#             print(f"크롭된 이미지 저장: {jpg_file_path}")
         
-        # JPG 또는 JPEG 파일에 대해서도 크롭
-        elif file_name.endswith(('.jpg', '.jpeg')):
-            save_path = file_path
-            crop_image(file_path, target_size, save_path)
-            print(f"크롭된 이미지 저장: {save_path}")
+#         # JPG 또는 JPEG 파일에 대해서도 크롭
+#         elif file_name.endswith(('.jpg', '.jpeg')):
+#             save_path = file_path
+#             crop_image(file_path, target_size, save_path)
+#             print(f"크롭된 이미지 저장: {save_path}")
 
-# [전처리] : 이미지 사이즈 크롭해서 맞추기 (완료해서 주석 처리 해둠.)----------------------------------------------------------------------------
-# 이미지 크기 가져오기
+# # [전처리] : 이미지 사이즈 크롭해서 맞추기 (완료해서 주석 처리 해둠.)----------------------------------------------------------------------------
+# # 이미지 크기 가져오기
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  
 STATIC_DIR = os.path.join(BASE_DIR,"..","static","icon","page3") 
 
-image_path = os.path.join(STATIC_DIR, "calendar.jpg")
-target_size = get_image_size(image_path)
+# image_path = os.path.join(STATIC_DIR, "calendar.jpg")
+# target_size = get_image_size(image_path)
 
-# 크롭할 폴더 지정
-folder_path = os.path.join(STATIC_DIR, "page3")  # 크롭할 이미지들이 있는 폴더 경로
+# # 크롭할 폴더 지정
+# folder_path = os.path.join(STATIC_DIR, "page3")  # 크롭할 이미지들이 있는 폴더 경로
 
-# 폴더 내 모든 이미지 크롭
-crop_images_in_folder(folder_path, target_size)
+# # 폴더 내 모든 이미지 크롭
+# crop_images_in_folder(folder_path, target_size)
 
 
 # Streamlit 앱 설정

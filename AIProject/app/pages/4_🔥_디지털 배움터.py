@@ -10,6 +10,7 @@ from PIL import Image
 key = "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"
 
 
+
 # [함수] --------------------------------------------------------------------------------------
 # 특정 경로의 이미지 파일에서 크기 가져오기
 def get_image_size(image_path):

@@ -7,7 +7,7 @@ from streamlit_folium import st_folium
 
 
 # 데이터 파일 경로
-file_path = "../data/cleaned_jobs_with_location.csv"
+file_path = "./data/cleaned_jobs_with_location.csv"
 
 # 데이터 불러오기
 df = pd.read_csv(file_path)
@@ -104,7 +104,7 @@ if st.session_state["page"] == "main":
     
     # 작은 제목 (일자리 현황)
     st.markdown("<h3 style='font-size:20px; margin-top:10px;'>일자리 현황</h3>", unsafe_allow_html=True)
-    components.html(open("../preprocessing/seoul_jobs_density_by_district.html", "r").read(), height=600)
+    components.html(open("./preprocessing/seoul_jobs_density_by_district.html", "r").read(), height=600)
 
     # 현재 페이지 데이터 가져오기
     start_idx = st.session_state["page_number"] * PAGE_SIZE

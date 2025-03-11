@@ -1,0 +1,16 @@
+{
+    "name": "홍길동",
+    "email": "gildong@skku.edu",
+    "phone": "010-1234-1234",
+    "education": [
+        "성균관대학교"
+    ],
+    "experience": [
+        "Microsoft 해커톤",
+        "성균관대학교"
+    ],
+    "skills": [
+        "문서작성",
+        "사무보조"
+    ]
+}

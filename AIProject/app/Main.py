@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 # 페이지 기본 설정
 st.set_page_config(page_title="Main", layout="wide", initial_sidebar_state="expanded")
@@ -37,12 +38,22 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 이미지 경로 설정
-image_1 = "../static/Icon/img_1.png"  
-image_2 = "../static/Icon/img_2.png" 
-image_3 = "../static/Icon/img_3.png"  
-image_4 = "../static/Icon/img_4.png"  
-image_5 = "../static/Icon/img_5.png" 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  
+STATIC_DIR = os.path.join(BASE_DIR, "static", "Icon") 
+
+# 이미지 경로 설정 (절대 경로)
+image_1 = os.path.join(STATIC_DIR, "img_1.png")
+image_2 = os.path.join(STATIC_DIR, "img_2.png")
+image_3 = os.path.join(STATIC_DIR, "img_3.png")
+image_4 = os.path.join(STATIC_DIR, "img_4.png")
+image_5 = os.path.join(STATIC_DIR, "img_5.png")
+
+# # 이미지 경로 설정
+# image_1 = "../static/Icon/img_1.png"  
+# image_2 = "../static/Icon/img_2.png" 
+# image_3 = "../static/Icon/img_3.png"  
+# image_4 = "../static/Icon/img_4.png"  
+# image_5 = "../static/Icon/img_5.png" 
 
 # 세 개의 칼럼
 col1, col2, col3 = st.columns([2, 2, 2])

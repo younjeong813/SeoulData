@@ -3,8 +3,10 @@ from gtts import gTTS
 import speech_recognition as sr
 import os
 import io
+import numpy as np
 from pdf_generator import create_pdf
 from CV_generator import generate_cv_with_ai  # CV 생성 함수 임포트
+
 # Streamlit 앱 설정
 st.set_page_config(
     page_title="Azure AI 기반 이력서 작성",
@@ -44,6 +46,7 @@ questions = [
     ("성격", "자신의 성격이나 장점에 대해서 말씀해주세요."),
 ]
 
+
 # 텍스트를 음성으로 변환
 def text_to_speech(text, lang="ko"):
     """
@@ -57,6 +60,7 @@ def text_to_speech(text, lang="ko"):
     tts.write_to_fp(audio_data)  # MP3 데이터를 메모리 파일에 저장
     audio_data.seek(0)  # 메모리 파일의 시작 위치로 이동
     return audio_data
+
 
 # 음성 입력 처리
 def recognize_speech():
@@ -74,15 +78,19 @@ def recognize_speech():
         st.error(f"❌ 음성 인식 서비스 오류: {e}")
         return ""
 
+
 # 페이지 전환 함수
 def next_page():
     st.session_state.page += 1
 
+
 def previous_page():
     st.session_state.page -= 1
 
+
 def submit_resume():
     st.session_state.page = "preview"
+
 
 # CSS 추가: 텍스트 입력 필드와 Audio Player 크기 조정
 st.markdown(
@@ -99,6 +107,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+
 # 질문 페이지
 def question_page():
     current_index = st.session_state.page - 1
@@ -111,7 +120,10 @@ def question_page():
     key, question = questions[current_index]
 
     # 질문 텍스트 가운데 정렬
-    st.markdown(f"<h2 style='text-align: center;'>질문 {current_index + 1} : {question}</h2>", unsafe_allow_html=True)
+    st.markdown(
+        f"<h2 style='text-align: center;'>질문 {current_index + 1} : {question}</h2>",
+        unsafe_allow_html=True,
+    )
 
     # 질문 음성 출력 (페이지 로드 시 자동)
     if st.session_state.last_audio_played != st.session_state.page:
@@ -137,24 +149,33 @@ def question_page():
                 st.session_state.user_data[key] = recognized_text
                 st.success("음성이 성공적으로 변환되었습니다!")
 
-
     # 여백 추가
     st.markdown("<div style='margin-bottom: 200px;'></div>", unsafe_allow_html=True)
-
 
     col1, col2, col3 = st.columns([1, 8, 1])  # 간격 조정
     with col1:
         if current_index > 0:
-            st.button("이전", on_click=lambda: st.session_state.update(page=st.session_state.page - 1))
+            st.button(
+                "이전",
+                on_click=lambda: st.session_state.update(
+                    page=st.session_state.page - 1
+                ),
+            )
     with col3:
         if current_index < total_questions - 1:
-            st.button("다음", on_click=lambda: st.session_state.update(page=st.session_state.page + 1))
+            st.button(
+                "다음",
+                on_click=lambda: st.session_state.update(
+                    page=st.session_state.page + 1
+                ),
+            )
         else:
             st.button("제출", on_click=lambda: st.session_state.update(page="preview"))
 
     # 진행바 추가
     progress = (current_index + 1) / total_questions
     st.progress(progress)
+
 
 # 미리보기 페이지
 def preview_page():
@@ -169,8 +190,10 @@ def preview_page():
     st.write("### 해당 정보가 맞는지 확인해주세요.")
     st.markdown(f"\n{st.session_state.generated_cv}\n")
 
-     # 사진 업로드
-    uploaded_photo = st.file_uploader("사진을 업로드하세요:", type=["jpg", "jpeg", "png"])
+    # 사진 업로드
+    uploaded_photo = st.file_uploader(
+        "사진을 업로드하세요:", type=["jpg", "jpeg", "png"]
+    )
 
     # 업로드된 사진 확인
     if uploaded_photo:
@@ -180,17 +203,25 @@ def preview_page():
         st.image(uploaded_photo, caption="업로드된 사진", use_container_width=True)
     else:
         uploaded_photo_path = None
-        
+
     # PDF 저장 버튼
     if st.button("PDF로 저장"):
-        pdf_path = create_pdf(st.session_state.generated_cv, uploaded_photo_path)  # 생성된 CV로 PDF 생성
+        pdf_path = create_pdf(
+            st.session_state.generated_cv, uploaded_photo_path
+        )  # 생성된 CV로 PDF 생성
         st.success("PDF가 생성되었습니다!")
         with open(pdf_path, "rb") as pdf_file:
-            st.download_button("📥 PDF 다운로드", data=pdf_file, file_name="resume.pdf", mime="application/pdf")
+            st.download_button(
+                "📥 PDF 다운로드",
+                data=pdf_file,
+                file_name="resume.pdf",
+                mime="application/pdf",
+            )
 
     # 이전 버튼
     if st.button("이전"):
         st.session_state.page = len(questions)
+
 
 # 페이지 렌더링
 if isinstance(st.session_state.page, int) and st.session_state.page <= len(questions):

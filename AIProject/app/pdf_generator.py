@@ -1,6 +1,7 @@
 from fpdf import FPDF
 import os
 
+
 def create_pdf(resume_text, photo_path):
     """
     주어진 이력서 텍스트와 사진을 사용하여 PDF를 생성합니다.

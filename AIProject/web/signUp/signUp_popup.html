@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Creation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="signUp_popup.css" />
+  </head>
+  <body>
+    <main class="password-creation-container">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/eccde75fccfe1803e564df55052bc99bd4281411"
+        alt="Logo"
+        class="logo"
+      />
+
+      <h1 class="page-title">비밀번호 생성</h1>
+      <p class="page-subtitle">비밀번호는 4자리 이상으로 해주세요.</p>
+
+      <section class="password-input-section">
+        <div class="password-field">
+          <label class="password-label">비밀번호 입력</label>
+          <button class="clear-button" id="clearPassword">
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 17 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="clear-icon"
+            >
+              <path
+                d="M14.9212 2.05615L2.34106 14.9716M2.34106 2.05615L14.9212 14.9716"
+                stroke="#B3B3B3"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="password-input-section">
+        <div class="password-field">
+          <label class="password-label">비밀번호 다시 입력</label>
+          <button class="clear-button" id="clearConfirmPassword">
+            <svg
+              width="17"
+              height="18"
+              viewBox="0 0 17 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="clear-icon"
+            >
+              <path
+                d="M14.9212 2.15967L2.34106 15.0752M2.34106 2.15967L14.9212 15.0752"
+                stroke="#B3B3B3"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <div class="submit-container">
+        <button class="submit-button" id="submitButton">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="arrow-icon"
+          >
+            <path
+              d="M7.08337 17.0002H26.9167M26.9167 17.0002L17 7.0835M26.9167 17.0002L17 26.9168"
+              stroke="#757575"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="error-modal" id="errorModal">
+        <div class="modal-content">
+          <p class="error-message">
+            비밀번호가 일치하지 않습니다.<br />
+            확인 후 다시 입력해주세요.
+          </p>
+          <button class="confirm-button" id="confirmButton">확인</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="signUp_popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,297 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: NanumGothic, -apple-system, Roboto, Helvetica, sans-serif;
+  background-color: #ffffff;
+}
+
+.home-container {
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 480px;
+  width: 100%;
+  padding-top: 21px;
+  overflow: hidden;
+}
+
+/* Header section */
+.header {
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  padding-left: 21px;
+  padding-right: 21px;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.logo {
+  aspect-ratio: 1.2;
+  object-fit: contain;
+  object-position: center;
+  width: 60px;
+}
+
+.search-bar {
+  border-radius: 100px;
+  background-color: #ffffff;
+  border: 2px solid #4b9ff8;
+  display: flex;
+  margin-top: 25px;
+  min-height: 55px;
+  padding: 13px 22px;
+  align-items: center;
+  gap: 43px;
+  font-size: 20px;
+  color: #6c6c6c;
+  font-weight: 700;
+  justify-content: start;
+}
+
+.search-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 30px;
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-shrink: 0;
+}
+
+.search-placeholder {
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Navigation tabs */
+.main-tabs {
+  display: flex;
+  margin-top: 22px;
+  width: 100%;
+  align-items: stretch;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.tab-button {
+  display: flex;
+  min-height: 40px;
+  padding: 5px 12px;
+  align-items: center;
+  gap: 6px;
+  justify-content: start;
+  flex: 1;
+  border-radius: 100px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.tab-active {
+  background-color: #4b9ff8;
+  color: #ffffff;
+  border: none;
+}
+
+.tab-inactive {
+  background-color: #ffffff;
+  color: #5a5a5a;
+  border: 2px solid #d9d9d9;
+}
+
+.tab-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 19px;
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-shrink: 0;
+}
+
+.tab-text {
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Main content */
+.main-content {
+  padding: 0 21px;
+}
+
+/* Recommendations section */
+.recommendations-section {
+  margin-top: 23px;
+}
+
+.recommendations-title {
+  color: #2c2c2c;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  width: 346px;
+}
+
+.recommendations-subtitle {
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+  margin-top: 24px;
+}
+
+/* Job cards */
+.job-card {
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid #e3e3e3;
+  align-self: center;
+  width: 100%;
+  padding: 6px 5px 14px 10px;
+  margin-top: 9px;
+}
+
+.job-card:first-of-type {
+  margin-top: 31px;
+  padding-bottom: 22px;
+}
+
+.job-header {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  font-size: 16px;
+  line-height: 2;
+  justify-content: space-between;
+}
+
+.company-name {
+  color: #5a5a5a;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.match-badge {
+  border-radius: 100px;
+  background-color: #f5f5f5;
+  padding: 8px 10px;
+  color: #4b9ff8;
+  font-weight: 800;
+  text-align: center;
+  font-size: 16px;
+}
+
+.match-label {
+  font-weight: 700;
+  color: #2c2c2c;
+}
+
+.job-details {
+  display: flex;
+  margin-top: 8px;
+  align-items: stretch;
+  gap: 26px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.job-title {
+  color: #212121;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-size: 20px;
+}
+
+.deadline {
+  text-align: center;
+}
+
+.urgent {
+  color: #db3a3a;
+}
+
+.ongoing {
+  color: #4b9ff8;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* Public jobs section */
+.public-jobs-section {
+  margin-top: 26px;
+}
+
+.public-jobs-title {
+  border-radius: 10px;
+  background-color: #dbecfe;
+  width: 100%;
+  padding: 7px 8px;
+  font-size: 20px;
+  color: #212121;
+  font-weight: 700;
+}
+
+.public-jobs-image {
+  aspect-ratio: 1.96;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 18px;
+}
+
+/* Bottom navigation */
+.bottom-nav {
+  background-color: #fcfcfc;
+  border-top: 1px solid #d9d9d9;
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  padding: 21px;
+  align-items: stretch;
+  gap: 17px;
+  font-size: 15px;
+  color: #888888;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2;
+  justify-content: space-between;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: start;
+}
+
+.nav-active {
+  color: #4b9ff8;
+}
+
+.nav-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 42px;
+}
+
+.nav-text {
+  margin-top: 5px;
+}

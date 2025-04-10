@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Search Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      <header class="app-header">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6bb4f7ec5b45888b3e493a8729d13e4ef11c4dee?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+          alt="Logo"
+          class="logo"
+        />
+        <div class="search-bar">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/07a7ba0cf04bf9e919490e2a92981e563a46f773?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+            alt="Search icon"
+            class="search-icon"
+          />
+          <p class="search-placeholder">공고를 검색해주세요.</p>
+        </div>
+        <nav class="main-tabs">
+          <button class="tab recommended-tab">
+            <div class="confetti-icon-wrapper">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d20817ec6fcb71e3b213cda3a3e807d9014d3a?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+                alt="Confetti icon"
+                class="confetti-icon"
+              />
+            </div>
+            <span class="tab-text">추천 구직 공고</span>
+          </button>
+          <button class="tab all-jobs-tab active">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f92e53b4e0c47572d950bd56d4d5a5b054a5694?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="All jobs icon"
+              class="all-jobs-icon"
+            />
+            <span class="tab-text">전체 구직 공고</span>
+          </button>
+        </nav>
+        <section class="filter-section">
+          <button class="filter-button job-filter">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/809832eb37f780848444e6b201d71170150e48c8?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Job icon"
+              class="filter-icon"
+            />
+            <span class="filter-text">직업 선택</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/32963084726f5a0f5f046ba3115dc1add2460065?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Dropdown icon"
+              class="dropdown-icon"
+            />
+          </button>
+          <button class="filter-button region-filter active">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/7681061c36343cce097865fd30596b999b4470ae?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Region icon"
+              class="filter-icon"
+            />
+            <span class="filter-text">지역 선택</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/8364fc535cb111b8a6e8a016039f38d74a60189b?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Dropdown icon"
+              class="dropdown-icon"
+            />
+          </button>
+        </section>
+      </header>
+
+      <section class="region-selection-panel">
+        <div class="region-panel-container">
+          <div class="region-panel-content">
+            <div class="region-columns">
+              <div class="region-column">
+                <div class="region-row">
+                  <button class="region-button highlighted">서울전체</button>
+                  <button class="region-button">강남구</button>
+                </div>
+                <div class="region-row">
+                  <button class="region-button">강북구</button>
+                  <button class="region-button">강서구</button>
+                </div>
+                <div class="region-row">
+                  <button class="region-button">광진구</button>
+                  <button class="region-button">구로구</button>
+                </div>
+                <div class="region-row">
+                  <button class="region-button">노원구</button>
+                  <button class="region-button">도봉구</button>
+                </div>
+              </div>
+              <div class="region-checkbox-rows">
+                <div class="region-checkbox-row">
+                  <div class="checkbox"></div>
+                  <button class="region-button">동작구</button>
+                </div>
+                <div class="region-checkbox-row">
+                  <div class="checkbox"></div>
+                  <button class="region-button">마포구</button>
+                </div>
+              </div>
+              <div class="region-column">
+                <div class="region-row">
+                  <button class="region-button">서초구</button>
+                  <button class="region-button">성동구</button>
+                </div>
+                <div class="region-row">
+                  <button class="region-button">송파구</button>
+                  <button class="region-button">양천구</button>
+                </div>
+                <div class="region-row">
+                  <button class="region-button">용산구</button>
+                  <button class="region-button">은평구</button>
+                </div>
+              </div>
+            </div>
+            <div class="region-columns">
+              <div class="region-column-right">
+                <button class="region-button">강동구</button>
+                <button class="region-button">관악구</button>
+                <button class="region-button">금천구</button>
+                <button class="region-button">동대문구</button>
+              </div>
+              <div class="region-checkbox-row-right">
+                <div class="checkbox"></div>
+                <button class="region-button">서대문구</button>
+              </div>
+              <div class="region-column-right">
+                <button class="region-button">성북구</button>
+                <button class="region-button">영등포구</button>
+                <button class="region-button">종로구</button>
+              </div>
+            </div>
+          </div>
+          <div class="region-bottom-row">
+            <button class="region-button">중구</button>
+            <button class="region-button">중랑구</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="job-card">
+        <h2 class="job-title">[압구정] 치료 및 케어실 정규직</h2>
+        <div class="job-status-container">
+          <div class="job-status-wrapper">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c0ac50f2daec74a121c64712c39b20f10a33cd84?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Status icon"
+              class="status-icon"
+            />
+            <p class="job-status">상시채용</p>
+          </div>
+        </div>
+        <h3 class="company-name">에이트성형외과의원</h3>
+      </section>
+
+      <footer class="app-footer">
+        <nav class="footer-nav">
+          <a href="#" class="nav-item home-nav active">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/941d6c756b146c9419d74801bbfbc34ae0ded45f?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Home icon"
+              class="nav-icon"
+            />
+            <span class="nav-text">홈</span>
+          </a>
+          <a href="#" class="nav-item favorites-nav">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/82944890bae6f44e37a096d79a02f8a7c16e86e6?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Favorites icon"
+              class="nav-icon"
+            />
+            <span class="nav-text">찜한 공고</span>
+          </a>
+          <a href="#" class="nav-item resume-intro-nav">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/b138a75c881121cc1ae2faaef66a939ff320b83d?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Resume intro icon"
+              class="nav-icon"
+            />
+            <span class="nav-text">자기소개서</span>
+          </a>
+          <a href="#" class="nav-item resume-nav">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e15976ce7d6a0654fd074c74d016c895777c838?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Resume icon"
+              class="nav-icon"
+            />
+            <span class="nav-text">이력서</span>
+          </a>
+          <a href="#" class="nav-item profile-nav">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ad13807fda677fec2d16450af2a883297572cad?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822"
+              alt="Profile icon"
+              class="nav-icon"
+            />
+            <span class="nav-text">내 정보</span>
+          </a>
+        </nav>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #fff;
+}
+
+/* Banner section */
+.banner {
+  width: 100%;
+  height: 95px;
+  background-color: #fff6d5;
+}
+
+/* Main content section */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+/* Hero section */
+.hero-section {
+  max-width: 346px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 40px;
+}
+
+.brand-name {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  background: linear-gradient(
+    270deg,
+    rgba(70, 151, 184, 0.96) 78.1%,
+    rgba(206, 173, 77, 0.96) 94.1%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-description {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Intro section */
+.intro-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.intro-text {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 20px;
+  color: #212121;
+  line-height: 25px;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.brand-name-small {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(
+    270deg,
+    rgba(70, 151, 184, 0.96) 38.1%,
+    rgba(206, 173, 77, 0.96) 94.1%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Logo image */
+.logo-image {
+  width: 159px;
+  height: 131px;
+  object-fit: contain;
+  margin: 20px 0;
+}
+
+/* Feature section */
+.feature-section {
+  margin-bottom: 20px;
+}
+
+.feature-text {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 18px;
+  color: #212121;
+  text-align: center;
+  line-height: 30px;
+  max-width: 341px;
+}
+
+/* CTA Button */
+.cta-button {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  width: 344px;
+  height: 53px;
+  border-radius: 5px;
+  margin: 40px auto;
+  cursor: pointer;
+  background-color: #ffe376;
+  display: block;
+  border: none;
+  text-align: center;
+  line-height: 53px;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .main-content {
+    padding: 30px 15px;
+  }
+
+  .hero-section {
+    font-size: 22px;
+  }
+
+  .intro-text {
+    font-size: 18px;
+  }
+
+  .feature-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    padding: 20px 10px;
+  }
+
+  .hero-section {
+    font-size: 20px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+  }
+
+  .feature-text {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    width: 90%;
+    max-width: 344px;
+  }
+}

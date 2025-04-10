@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전화번호 입력</title>
+    <link rel="stylesheet" href="signUp_tel.css" />
+  </head>
+  <body>
+    <main class="phone-input-screen">
+      <div class="container">
+        <header class="header">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/eccde75fccfe1803e564df55052bc99bd4281411"
+            alt="Logo"
+            class="logo"
+          />
+          <div class="header-content">
+            <h1 class="title">전화번호 입력</h1>
+            <p class="description">
+              전화번호를 입력해주세요. 공고 지원 시 사용됩니다.
+            </p>
+          </div>
+        </header>
+
+        <form class="phone-form">
+          <div class="input-container">
+            <input
+              type="tel"
+              class="phone-input"
+              placeholder="전화번호 입력"
+              aria-label="전화번호 입력"
+            />
+            <button type="button" class="clear-button" aria-label="입력 지우기">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 1L1 13M1 1L13 13"
+                  stroke="#757575"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <button type="button" class="next-button" aria-label="다음">
+          <svg
+            width="34"
+            height="35"
+            viewBox="0 0 34 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.08325 17.5002H26.9166M26.9166 17.5002L16.9999 7.5835M26.9166 17.5002L16.9999 27.4168"
+              stroke="#434343"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </main>
+
+    <script src="signUp_tel.js"></script>
+  </body>
+</html>

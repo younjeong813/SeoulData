@@ -1,0 +1,138 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "NanumGothic", sans-serif;
+}
+
+/* Main Container */
+.password-creation-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.password-creation-container {
+  width: 412px;
+  height: 100%;
+  position: relative;
+}
+
+/* Header Section */
+.password-header {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  padding: 17px 19px 0;
+}
+
+.logo-image {
+  width: 60.586px;
+  height: 50px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.page-title {
+  color: #000;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.page-subtitle {
+  color: #5a5a5a;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+/* Form Section */
+.password-form {
+  position: relative;
+}
+
+.password-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 0 24px;
+  margin-top: 97px;
+}
+
+.password-field {
+  display: flex;
+  width: 100%;
+  height: 66px;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 4px solid #ffe376;
+}
+
+.password-input {
+  width: 100%;
+  height: 100%;
+  padding: 18px 1px;
+  font-size: 18px;
+  color: #888;
+  font-family: "NanumGothic", sans-serif;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.clear-button {
+  position: absolute;
+  right: 20px;
+  padding: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-icon {
+  stroke: #757575;
+  stroke-width: 2;
+}
+
+/* Submit Button */
+.submit-button-container {
+  position: absolute;
+  right: 45px;
+  top: 455px;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 67px;
+  height: 67px;
+  border-radius: 9999px;
+  border: 2px solid #d9d9d9;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  stroke: #434343;
+  stroke-width: 4;
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+  .password-creation-container {
+    width: 100%;
+  }
+}

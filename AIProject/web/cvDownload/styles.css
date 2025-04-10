@@ -1,0 +1,196 @@
+/* ======= 공통 스타일 ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  background-color: #fff;
+}
+
+/* ======= 공통 요소 ======= */
+.container,
+.job-search-container,
+.password-creation-container,
+.phone-input-screen {
+  max-width: 412px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 17px 19px;
+  background-color: #fff;
+}
+
+.logo {
+  width: 61px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.page-title,
+.main-heading,
+.title,
+.header-title {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #000;
+}
+
+.page-subtitle,
+.sub-heading,
+.description,
+.header-description {
+  font-size: 15px;
+  line-height: 30px;
+  color: #5a5a5a;
+}
+
+.input-container {
+  width: 100%;
+  height: 66px;
+  border-radius: 5px;
+  border-bottom: 4px solid #ffe376;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  position: relative;
+}
+
+.input-field,
+.phone-input,
+.password-input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-family: "Nanum Gothic", sans-serif;
+  color: #212121;
+}
+
+.clear-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.next-button,
+.submit-button {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  border: 2px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  width: 34px;
+  height: 34px;
+}
+
+/* ======= 온보딩/가입 화면 ======= */
+.onboarding-container,
+.signup-container {
+  padding-bottom: 395px;
+}
+
+.input-placeholder {
+  color: #888888;
+}
+
+/* ======= 비밀번호 입력 ======= */
+.password-field {
+  position: relative;
+  padding: 19px 27px;
+}
+
+/* ======= 에러 모달 ======= */
+.error-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(217, 217, 217, 0.51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: 346px;
+  height: 182px;
+  background: #fff;
+  border: 2px solid #bdbdbd;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message {
+  font-size: 18px;
+  color: #212121;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+
+.confirm-button {
+  font-size: 18px;
+  color: #212121;
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ======= 반응형 ======= */
+@media (max-width: 640px) {
+  .container,
+  .job-search-container,
+  .password-creation-container {
+    padding: 10px;
+  }
+
+  .main-heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .input-container {
+    height: 60px;
+  }
+
+  .submit-button,
+  .next-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .arrow-icon {
+    width: 30px;
+    height: 30px;
+  }
+}

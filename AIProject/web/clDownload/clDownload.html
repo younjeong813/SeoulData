@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Preview</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="resume-preview">
+        <header class="preview-header">
+          <div class="logo-container">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/eccde75fccfe1803e564df55052bc99bd4281411"
+              alt="Logo"
+              class="logo"
+            />
+            <div class="header-text">
+              <h1 class="title">내 자기소개서 미리보기</h1>
+              <p class="subtitle">아래와 같이 자기소개서가 완성되어있어요</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="zoom-controls">
+          <button class="zoom-button" id="zoom-in" aria-label="확대">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#5A5A5A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M20.9999 20.9999L16.6499 16.6499"
+                stroke="#5A5A5A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M11 8V14"
+                stroke="#5A5A5A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M8 11H14"
+                stroke="#5A5A5A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+          <button class="zoom-button" id="zoom-out" aria-label="축소">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#5A5A5A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M20.9999 20.9999L16.6499 16.6499"
+                stroke="#5A5A5A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M8 11H14"
+                stroke="#5A5A5A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="resume-container">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d57d13588e39fd6cc1ed6448a230800fe3037fd"
+            alt="이력서 미리보기"
+            class="resume-image"
+            id="resume-image"
+          />
+        </div>
+
+        <div class="action-buttons">
+          <button class="edit-button" id="edit-button">편집하기</button>
+          <button class="save-button" id="save-button">PDF 저장</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="clDownload.js"></script>
+  </body>
+</html>

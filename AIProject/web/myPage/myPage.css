@@ -1,0 +1,398 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: NanumGothic, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+/* Profile page container */
+.profile-page {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 480px;
+  width: 100%;
+  padding-top: 17px;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+/* Header section */
+.profile-header {
+  display: flex;
+  width: 100%;
+  max-width: 361px;
+  align-items: stretch;
+}
+
+.header-content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  width: fit-content;
+}
+
+.header-main {
+  z-index: 10;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.header-logo {
+  aspect-ratio: 1.22;
+  object-fit: contain;
+  object-position: center;
+  width: 61px;
+}
+
+.header-title {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  margin-top: 14px;
+  font-size: 28px;
+}
+
+.header-tags {
+  color: rgba(75, 159, 248, 1);
+  font-weight: 700;
+  margin-top: 14px;
+  font-size: 28px;
+}
+
+.edit-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 15px;
+  align-self: end;
+  margin-top: 230px;
+  flex-shrink: 0;
+}
+
+/* Section titles */
+.section-title {
+  color: rgba(90, 90, 90, 1);
+  font-size: 20px;
+  font-weight: 700;
+  align-self: start;
+  margin-top: -15px;
+}
+
+/* Profile details section */
+.profile-details {
+  display: flex;
+  margin-top: 24px;
+  width: 100%;
+  max-width: 333px;
+  align-items: stretch;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.profile-labels {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 15px;
+  color: rgba(33, 33, 33, 1);
+  font-weight: 400;
+  white-space: nowrap;
+  line-height: 2;
+}
+
+.gender-label {
+  margin-top: 29px;
+}
+
+.birth-label {
+  align-self: stretch;
+  margin-top: 29px;
+}
+
+.phone-label {
+  align-self: stretch;
+  margin-top: 29px;
+}
+
+.email-label {
+  margin-top: 29px;
+}
+
+.profile-values {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.profile-info {
+  display: flex;
+  padding-left: 44px;
+  flex-direction: column;
+  align-items: start;
+}
+
+.profile-name {
+  color: rgba(33, 33, 33, 1);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.gender-birth-container {
+  display: flex;
+  margin-top: 26px;
+  width: 100%;
+  align-items: stretch;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.gender-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.radio-group {
+  align-self: start;
+  display: flex;
+  align-items: start;
+  gap: 14px;
+}
+
+.radio-button {
+  background-color: rgba(245, 245, 245, 1);
+  border-color: rgba(0, 0, 0, 0.6);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  display: flex;
+  width: 25px;
+  flex-shrink: 0;
+  height: 25px;
+}
+
+.radio-button.selected {
+  border-color: rgba(75, 159, 248, 1);
+  display: flex;
+  padding-left: 4px;
+  padding-right: 4px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-dot {
+  background-color: rgba(75, 159, 248, 1);
+  border-color: rgba(75, 159, 248, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  display: flex;
+  width: 17px;
+  flex-shrink: 0;
+  height: 17px;
+}
+
+.radio-label {
+  color: rgba(33, 33, 33, 1);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.birth-date {
+  color: rgba(33, 33, 33, 1);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+  margin-top: 16px;
+}
+
+.phone-number {
+  color: rgba(33, 33, 33, 1);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+  margin-top: 30px;
+}
+
+.email-address {
+  color: rgba(33, 33, 33, 1);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+  margin-top: 28px;
+}
+
+.divider {
+  aspect-ratio: 58.82;
+  object-fit: contain;
+  object-position: center;
+  width: 172px;
+  margin-top: 33px;
+  max-width: 100%;
+}
+
+/* Job preferences section */
+.job-preferences {
+  display: flex;
+  margin-top: 22px;
+  width: 100%;
+  max-width: 352px;
+  align-items: stretch;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.job-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.job-label-group {
+  display: flex;
+  margin-top: 29px;
+  padding-left: 9px;
+  flex-direction: column;
+  align-items: start;
+  font-size: 15px;
+  color: rgba(33, 33, 33, 1);
+  font-weight: 400;
+  line-height: 2;
+}
+
+.location-label {
+  margin-top: 42px;
+}
+
+.time-label {
+  align-self: stretch;
+  margin-top: 42px;
+}
+
+.salary-label {
+  margin-top: 39px;
+}
+
+.job-values {
+  font-size: 18px;
+  color: rgba(33, 33, 33, 1);
+  font-weight: 700;
+  text-align: right;
+  line-height: 2;
+}
+
+.job-info {
+  display: flex;
+  padding-left: 19px;
+  flex-direction: column;
+}
+
+.edit-job-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 15px;
+  align-self: end;
+}
+
+.job-position {
+  align-self: start;
+  margin-top: 35px;
+}
+
+.job-location {
+  align-self: end;
+  margin-top: 39px;
+}
+
+.job-time {
+  align-self: start;
+  margin-top: 39px;
+}
+
+.job-salary {
+  margin-top: 36px;
+}
+
+/* Bottom navigation */
+.bottom-navigation {
+  background-color: rgba(252, 252, 252, 1);
+  border-color: rgba(217, 217, 217, 1);
+  border-style: solid;
+  border-width: 1px;
+  align-self: stretch;
+  display: flex;
+  margin-top: 41px;
+  width: 100%;
+  padding: 21px;
+  align-items: stretch;
+  gap: 17px;
+  font-size: 15px;
+  color: rgba(136, 136, 136, 1);
+  font-weight: 400;
+  text-align: center;
+  line-height: 2;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: start;
+}
+
+.nav-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 42px;
+}
+
+.nav-item:nth-child(1) .nav-icon {
+  width: 42px;
+}
+
+.nav-item:nth-child(2) .nav-icon {
+  width: 45px;
+}
+
+.nav-item:nth-child(3) .nav-icon {
+  aspect-ratio: 0.83;
+  width: 38px;
+}
+
+.nav-item:nth-child(4) .nav-icon {
+  aspect-ratio: 1.05;
+  width: 44px;
+}
+
+.nav-item:nth-child(5) .nav-icon {
+  width: 48px;
+}
+
+.nav-label {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.nav-item:nth-child(1) .nav-label {
+  width: 50px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border-radius: 0;
+}
+
+.nav-item.active {
+  color: rgba(75, 159, 248, 1);
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비밀번호 생성</title>
+    <link rel="stylesheet" href="signUp_passwd.css" />
+  </head>
+  <body>
+    <main class="password-creation-page">
+      <section class="password-creation-container">
+        <header class="password-header">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/eccde75fccfe1803e564df55052bc99bd4281411"
+            alt="로고"
+            class="logo-image"
+          />
+          <div class="header-text">
+            <h1 class="page-title">비밀번호 생성</h1>
+            <p class="page-subtitle">비밀번호는 4자리 이상으로 해주세요.</p>
+          </div>
+        </header>
+        <form class="password-form">
+          <div class="password-input-container">
+            <div class="password-field">
+              <input
+                type="password"
+                id="password"
+                placeholder="비밀번호를 입력해주세요."
+                class="password-input"
+              />
+              <button
+                type="button"
+                class="clear-button"
+                aria-label="입력 지우기"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="clear-icon"
+                >
+                  <path
+                    d="M18 6L6 18M6 6l12 12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="password-field">
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="비밀번호를 다시 입력해주세요."
+                class="password-input"
+              />
+              <button
+                type="button"
+                class="clear-button"
+                aria-label="입력 지우기"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="clear-icon"
+                >
+                  <path
+                    d="M18 6L6 18M6 6l12 12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="submit-button-container">
+            <button type="submit" class="submit-button" aria-label="다음">
+              <svg
+                width="34"
+                height="35"
+                viewBox="0 0 34 35"
+                class="arrow-icon"
+              >
+                <path
+                  d="M7.08337 17.5002H26.9167M26.9167 17.5002L17 7.5835M26.9167 17.5002L17 27.4168"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="signUp_passwd.js"></script>
+  </body>
+</html>

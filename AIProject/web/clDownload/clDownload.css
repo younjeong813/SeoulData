@@ -1,0 +1,142 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "NanumGothic", sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Resume preview section */
+.resume-preview {
+  width: 412px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 640px) {
+  .resume-preview {
+    width: 100%;
+  }
+}
+
+/* Header section */
+.preview-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  width: 61px;
+  height: 50px;
+}
+
+.header-text {
+  margin-top: 53px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c2c2c;
+  line-height: 40px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #212121;
+  line-height: 30px;
+}
+
+/* Zoom controls */
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  margin-bottom: 13px;
+}
+
+.zoom-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoom-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Resume container */
+.resume-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 38px;
+}
+
+.resume-image {
+  width: 338px;
+  height: 479px;
+  border: 1px solid #000;
+  transition: transform 0.3s ease;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.edit-button,
+.save-button {
+  font-size: 20px;
+  font-weight: 700;
+  width: 170px;
+  height: 46px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-button {
+  background-color: transparent;
+  border: 1px solid #000;
+}
+
+.save-button {
+  background-color: #ffe376;
+}

@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "NanumGothic";
+  src: url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "NanumGothic", sans-serif;
+  background-color: #fff;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-wrapper {
+  width: 100%;
+  max-width: 412px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 12px;
+}
+
+.logo {
+  width: 61px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* Search Section */
+.search-section {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  padding: 12px 22px;
+  align-items: center;
+  gap: 43px;
+  border-radius: 100px;
+  border: 2px solid #4b9ff8;
+  background-color: #fff;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-placeholder {
+  color: rgba(108, 108, 108, 0.8);
+  font-family: NanumGothic;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+/* Category Section */
+.category-section {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.category-tab {
+  display: flex;
+  height: 40px;
+  padding: 5px 8px;
+  align-items: center;
+  gap: 6px;
+  border-radius: 100px;
+  border: 2px solid #d9d9d9;
+  background-color: #fff;
+}
+
+.category-tab.active {
+  background-color: #4b9ff8;
+  border: none;
+  padding: 5px 12px;
+}
+
+.category-icon {
+  width: 19px;
+  height: 19px;
+}
+
+.category-text {
+  color: #5a5a5a;
+  text-align: center;
+  font-family: NanumGothic;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.category-tab.active .category-text {
+  color: #fff;
+}
+
+/* Job Listings */
+.job-listings {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.job-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-header {
+  height: 34px;
+  width: 100%;
+}
+
+.job-category {
+  color: #212121;
+  font-family: NanumGothic;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  width: 100%;
+  height: 34px;
+  border-radius: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.job-card:first-child .job-category {
+  background-color: #dbecfe;
+}
+
+.job-card:last-child .job-category {
+  background-color: #fff7d6;
+}
+
+.job-image-container {
+  position: relative;
+}
+
+.job-image {
+  width: 100%;
+  height: 182px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.job-card:last-child .job-image {
+  height: 200px;
+}
+
+.job-title {
+  padding: 10px;
+  color: #fff;
+  font-family: NanumGothic;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Footer Navigation */
+.app-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  max-width: 412px;
+  background-color: #fcfcfc;
+  border-top: 1px solid #d9d9d9;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 20px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-text {
+  color: #888;
+  text-align: center;
+  font-family: NanumGothic;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.nav-text.active {
+  color: #4b9ff8;
+}

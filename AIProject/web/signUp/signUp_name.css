@@ -1,0 +1,162 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nanum Gothic", sans-serif;
+  background-color: #fff;
+}
+
+/* Main container */
+.onboarding-container {
+  max-width: 412px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: 100vh;
+  padding: 17px 19px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/* Header section with logo and welcome text */
+.header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-bottom: 97px;
+}
+
+.logo {
+  width: 61px;
+  height: 50px;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.welcome-title {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #000;
+  margin: 0;
+}
+
+.welcome-subtitle {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #5a5a5a;
+  margin: 0;
+}
+
+/* Input field styling */
+.input-container {
+  width: 100%;
+  height: 66px;
+  border-radius: 5px;
+  border-bottom: 4px solid #ffe376;
+  display: flex;
+  align-items: center;
+  padding: 18px 1px;
+  box-sizing: border-box;
+  margin-bottom: 122px;
+  background-color: #fff;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.input-placeholder {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 18px;
+  color: #888888;
+  cursor: text;
+}
+
+.clear-button {
+  color: #757575;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  border: 2px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0;
+}
+
+.arrow-icon {
+  width: 34px;
+  height: 34px;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .onboarding-container {
+    max-width: 991px;
+  }
+}
+
+@media (max-width: 640px) {
+  .onboarding-container {
+    max-width: 640px;
+    padding: 15px;
+  }
+
+  .welcome-title {
+    font-size: 24px;
+  }
+
+  .welcome-subtitle {
+    font-size: 14px;
+  }
+
+  .input-container {
+    height: 60px;
+  }
+
+  .submit-button {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Active input state */
+.input-container.active {
+  border-bottom-color: #ffd43b;
+}
+
+.input-container.has-text .input-placeholder {
+  display: none;
+}
+
+/* Hidden input field */
+#nameInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
